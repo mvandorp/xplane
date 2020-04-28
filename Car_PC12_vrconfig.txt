@@ -118,6 +118,11 @@ ACTION axis_knob 0 1 .025 sim/cockpit2/switches/instrument_brightness_ratio[0]
 DEG_PER_ACTION 15
 END_MANIP
 
+BEGIN_MANIP drag_axis sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot
+ACTION axis_knob 28 31.5 .01 sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot
+DEG_PER_ACTION 20
+END_MANIP
+
 BEGIN_MANIP drag_axis sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot
 ACTION axis_knob 28 31.5 .01 sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot
 DEG_PER_ACTION 20
