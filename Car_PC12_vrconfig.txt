@@ -1,0 +1,188 @@
+A
+1100
+VRCONFIG
+
+################################
+#TELEPORT HOTSPOTS
+################################
+
+BEGIN_TELEPORT_HOTSPOT SITTING Pilot's Seat
+	AABB -0.62 0.38 -2.00 -0.10 0.35 -1.6
+	PRESET_XYZ -0.37 1.03 -1.86
+	PRESET_PSI 0.0
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT
+
+BEGIN_TELEPORT_HOTSPOT SITTING CoPilot's Seat
+	AABB  0.1  0.38  -2.00 0.55 0.67 -1.6
+	PRESET_XYZ  0.37 1.03 -1.86
+	PRESET_PSI 0.0
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT
+
+
+BEGIN_TELEPORT_HOTSPOT SITTING Rear-facing passenger Seat Left
+	AABB -0.7 0.3 0.10 -0.20 0.5 0.4
+	PRESET_XYZ -0.42 1.0 0.1
+	PRESET_PSI 180.0
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT
+
+BEGIN_TELEPORT_HOTSPOT SITTING Rear-facing passenger Seat Right
+	AABB  0.2  0.3  0.10 0.7 0.5 0.4
+	PRESET_XYZ  0.42 1.0 0.1
+	PRESET_PSI 180.0
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT
+
+
+BEGIN_TELEPORT_HOTSPOT SITTING Second Row passenger Seat Left
+	AABB -0.7 0.3 1.0 -0.20 0.5 1.3
+	PRESET_XYZ -0.42 1.0 1.1
+	PRESET_PSI 00.0
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT
+
+BEGIN_TELEPORT_HOTSPOT SITTING Second Row passenger Seat Right
+	AABB  0.2  0.3  1.00 0.7 0.5 1.3
+	PRESET_XYZ  0.42 1.0 1.1
+	PRESET_PSI 0.0
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT
+
+
+
+BEGIN_TELEPORT_HOTSPOT SITTING Third Row passenger Seat Left
+	AABB -0.7 0.3 2.2 -0.20 0.5 2.5
+	PRESET_XYZ -0.42 1.0 2.3
+	PRESET_PSI 00.0
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT
+
+BEGIN_TELEPORT_HOTSPOT SITTING Third Row passenger Seat Right
+	AABB  0.2  0.3  2.20 0.7 0.5 2.5
+	PRESET_XYZ  0.42 1.0 2.3
+	PRESET_PSI 0.0
+	PRESET_THE 0.0
+	PRESET_PHI 0.0
+END_TELEPORT_HOTSPOT
+
+
+#######
+#Manipulator Modifiers
+
+#Yoke
+BEGIN_MANIP drag_xy sim/cockpit2/controls/yoke_roll_ratio sim/cockpit2/controls/yoke_pitch_ratio
+#YOKE_MANIP_TRANSLATE <pitch min x> <pitch min y> <pitch min z> <pitch max x> <pitch max y> <pitch max z> <roll cent x> <roll cent Z> <roll cent Y> <roll axis x> <roll axis y> <roll axis z> <roll min ang> <roll max ang>
+ YOKE_MANIP_TRANSLATE		0.0			0.0				0.0			0			0.000000		0.09		-0.36328		0.24046		2.17543			0				0			-1				-90				90
+END_MANIP
+
+
+##Pilot's Instrument Panel
+
+#Pilot's Stby Artificial Horizon
+BEGIN_MANIP drag_axis sim/cockpit2/gauges/actuators/artificial_horizon_adjust_deg_pilot
+	ACTION axis_knob -1.0 1.0 0.01 sim/cockpit2/gauges/actuators/artificial_horizon_adjust_deg_pilot
+	DEG_PER_ACTION 1
+END_MANIP
+
+#Nav 2 OBS
+BEGIN_MANIP drag_axis sim/cockpit/radios/nav2_obs_degm	
+	ACTION axis_knob -720.0 720.0 1 sim/cockpit/radios/nav2_obs_degm
+	DEG_PER_ACTION 1
+	WRAP_MANIP
+END_MANIP
+
+#Standby Altimeter Baro Setting
+BEGIN_MANIP drag_axis sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot
+	ACTION axis_knob  28.00 31.50 0.01 sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot
+	DEG_PER_ACTION 1
+END_MANIP
+
+#Altimeter Baro Setting
+BEGIN_MANIP drag_axis sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot
+	ACTION axis_knob  28.00 31.50 0.01 sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot
+	DEG_PER_ACTION 1
+END_MANIP
+
+#Autopilot Altitude Select Panel
+BEGIN_MANIP drag_axis thranda/autopilot/APComboScroll
+	ACTION axis_knob -500 500 1 thranda/autopilot/APComboScroll
+	DEG_PER_ACTION 5
+	WRAP_MANIP
+END_MANIP
+
+
+#######
+#Center Panel
+
+#Radar Altimeter
+BEGIN_MANIP drag_axis sim/cockpit2/gauges/actuators/radio_altimeter_bug_ft_pilot
+	ACTION axis_knob 0 6500 10 sim/cockpit2/gauges/actuators/radio_altimeter_bug_ft_pilot
+	DEG_PER_ACTION 2
+	WRAP_MANIP
+END_MANIP
+
+#HSI Course
+BEGIN_MANIP drag_axis sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot
+	ACTION axis_knob  -720 720 1 sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot
+	DEG_PER_ACTION 1
+	WRAP_MANIP
+END_MANIP
+
+#Heading Bug
+BEGIN_MANIP drag_axis sim/cockpit2/autopilot/heading_dial_deg_mag_pilot
+	ACTION axis_knob  -720 720 1 sim/cockpit2/autopilot/heading_dial_deg_mag_pilot
+	DEG_PER_ACTION 1
+	WRAP_MANIP
+END_MANIP
+
+#EFIS Brightness
+BEGIN_MANIP drag_axis sim/cockpit2/switches/instrument_brightness_ratio[0]
+	ACTION axis_knob 0.0 1.0 0.1 sim/cockpit2/switches/instrument_brightness_ratio[0]
+	DEG_PER_ACTION 10
+END_MANIP
+BEGIN_MANIP drag_axis sim/cockpit2/switches/instrument_brightness_ratio[1]
+	ACTION axis_knob 0.0 1.0 0.1 sim/cockpit2/switches/instrument_brightness_ratio[1]
+	DEG_PER_ACTION 10
+END_MANIP
+
+#Avidyne:
+BEGIN_MANIP drag_axis com/dkmp/Avidyne/Page
+	ACTION axis_knob 0.0 5.0 1 com/dkmp/Avidyne/Page
+	DEG_PER_ACTION 20
+END_MANIP
+
+BEGIN_MANIP drag_axis sim/cockpit/switches/EFIS_map_range_selector
+	ACTION axis_knob 0.0 6.0 1 sim/cockpit/switches/EFIS_map_range_selector
+	DEG_PER_ACTION 20
+END_MANIP
+
+#Cabin Temp knob
+BEGIN_MANIP drag_axis thranda/pneumatic/CabinTempAct
+	ACTION axis_knob -1 1 0.01 thranda/pneumatic/CabinTempAct
+	DEG_PER_ACTION 10
+END_MANIP
+
+
+#####
+#Copilot's Panel
+
+#Pressurization, Cabin Altitude
+BEGIN_MANIP drag_axis sim/cockpit2/pressurization/actuators/cabin_altitude_ft
+	ACTION axis_knob -1000 10000 100 sim/cockpit2/pressurization/actuators/cabin_altitude_ft
+	DEG_PER_ACTION 5
+END_MANIP
+
+#Pressurization, Cabin Altitude VVI
+BEGIN_MANIP drag_axis sim/cockpit2/pressurization/actuators/cabin_vvi_fpm
+	ACTION axis_knob 0 6500 50 sim/cockpit2/pressurization/actuators/cabin_vvi_fpm
+	DEG_PER_ACTION 10
+END_MANIP
