@@ -118,8 +118,8 @@ ACTION axis_knob 0 1 .025 sim/cockpit2/switches/instrument_brightness_ratio[0]
 DEG_PER_ACTION 15
 END_MANIP
 
-BEGIN_MANIP drag_axis sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot
-ACTION axis_knob 28 31.5 .01 sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot
+BEGIN_MANIP drag_axis sim/cockpit2/gauges/actuators/barometer_setting_in_hg_stby
+ACTION axis_knob 28 31.5 .01 sim/cockpit2/gauges/actuators/barometer_setting_in_hg_stby
 DEG_PER_ACTION 20
 END_MANIP
 
@@ -138,8 +138,8 @@ ACTION axis_knob -720 720 2 sim/cockpit2/radios/actuators/hsi_obs_deg_mag_pilot
 DEG_PER_ACTION 4
 END_MANIP
 
-BEGIN_MANIP drag_axis sim/cockpit/radios/nav2_obs_degm
-ACTION axis_knob -720 720 2 sim/cockpit/radios/nav2_obs_degm
+BEGIN_MANIP drag_axis sim/cockpit2/radios/actuators/nav_obs_deg_mag_pilot[2]
+ACTION axis_knob -720 720 2 sim/cockpit2/radios/actuators/nav_obs_deg_mag_pilot[2]
 DEG_PER_ACTION 4
 END_MANIP
 
@@ -157,11 +157,6 @@ END_MANIP
 
 BEGIN_MANIP drag_axis sim/cockpit2/pressurization/actuators/cabin_altitude_ft
 ACTION axis_knob -1000 10000 50 sim/cockpit2/pressurization/actuators/cabin_altitude_ft
-DEG_PER_ACTION 4
-END_MANIP
-
-BEGIN_MANIP drag_axis sim/cockpit/radios/nav2_obs_degm
-ACTION axis_knob -720 720 2 sim/cockpit/radios/nav2_obs_degm
 DEG_PER_ACTION 4
 END_MANIP
 

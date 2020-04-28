@@ -18911,9 +18911,9 @@ ANIM_trans -0.084460 -0.200920 -1.963280 -0.084460 -0.200920 -1.963280 0.000000 
 ANIM_rotate 1.000000 0.000000 0.000000 111.000259 111.000259 0.000000 0.000000
 ANIM_trans 0.084460 0.200920 1.963280 0.084460 0.200920 1.963280 0.000000 0.000000 none
 ANIM_trans -0.084460 -0.200920 -1.963280 -0.084460 -0.200920 -1.963280 0.000000 0.000000 none
-ANIM_rotate 1.000000 0.000000 0.000000 0.000000 -24.000055 0.000000 1.000000 thranda/cockpit/ManualOverride
+ANIM_rotate 1.000000 0.000000 0.000000 0.000000 -24.000055 0.000000 1.000000 sim/cockpit2/controls/thrust_vector_ratio
 ANIM_trans 0.084460 0.200920 1.963280 0.084460 0.200920 1.963280 0.000000 0.000000 none
-ATTR_manip_drag_rotate hand -0.084460 -0.200920 -1.963280 -.5 0 0	0.0	53	0.0	0	1.0	0.0	0.0 thranda/cockpit/ManualOverride none
+ATTR_manip_drag_rotate hand -0.084460 -0.200920 -1.963280 -.5 0 0	0.0	53	0.0	0	1.0	0.0	0.0 sim/cockpit2/controls/thrust_vector_ratio none
 ATTR_manip_wheel 0.100000
 TRIS 1656 60
 ANIM_end
@@ -19642,7 +19642,7 @@ TRIS 20982 6
 ATTR_manip_drag_axis rotate_medium -0.200000 0.100000 0.000000 28.000000 31.500000 sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot
 ATTR_manip_wheel 0.010000
 TRIS 20988 372
-ATTR_manip_drag_axis rotate_medium -0.200000 0.100000 0.000000 28.000000 31.500000 sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot
+ATTR_manip_drag_axis rotate_medium -0.200000 0.100000 0.000000 28.000000 31.500000 sim/cockpit2/gauges/actuators/barometer_setting_in_hg_stby
 ATTR_manip_wheel 0.010000
 TRIS 21360 372
 ATTR_manip_push down 0.000000 0.500000 thranda/BT[470]
@@ -19889,7 +19889,7 @@ TRIS 23436 36
 ATTR_manip_toggle button 1.000000 0.000000 thranda/ice/WindshieldIceL
 ATTR_manip_wheel 1.000000
 TRIS 23472 36
-ATTR_manip_toggle button 1.000000 0.000000 sim/cockpit2/ice/anti_ice_engine_air[0]
+ATTR_manip_toggle button 1.000000 0.000000 simcoders/rep/inertial_separator_0/active
 ATTR_manip_wheel 1.000000
 TRIS 23508 36
 ATTR_manip_toggle button 1.000000 0.000000 thranda/ice/Probes
@@ -19979,7 +19979,7 @@ TRIS 26268 372
 ATTR_manip_drag_rotate hand -0.34460 -0.200920 -1 2 0 0	0.0	4	0.0	0	1.0	0.0	0.0 sim/cockpit2/controls/parking_brake_ratio none
 ATTR_manip_wheel 0.050000
 TRIS 26640 372
-ATTR_manip_drag_axis rotate_small -2.000000 -2.000000 0.000000 -720.000000 720.000000 sim/cockpit/radios/nav2_obs_degm
+ATTR_manip_drag_axis rotate_small -2.000000 -2.000000 0.000000 -720.000000 720.000000 sim/cockpit2/radios/actuators/nav_obs_deg_mag_pilot[2]
 ATTR_manip_wheel -1.000000
 TRIS 27012 372
 ATTR_manip_drag_axis rotate_small 0.000000 0.070000 0.000000 -1.000000 1.000000 sim/cockpit2/gauges/actuators/artificial_horizon_adjust_deg_pilot
