@@ -94,15 +94,15 @@ BEGIN_MANIP drag_axis sim/cockpit2/gauges/actuators/artificial_horizon_adjust_de
 END_MANIP
 
 #Nav 2 OBS
-BEGIN_MANIP drag_axis sim/cockpit/radios/nav2_obs_degm	
-	ACTION axis_knob -720.0 720.0 1 sim/cockpit/radios/nav2_obs_degm
+BEGIN_MANIP drag_axis sim/cockpit2/radios/actuators/nav_obs_deg_mag_pilot[2]
+	ACTION axis_knob -720.0 720.0 1 sim/cockpit2/radios/actuators/nav_obs_deg_mag_pilot[2]
 	DEG_PER_ACTION 1
 	WRAP_MANIP
 END_MANIP
 
 #Standby Altimeter Baro Setting
-BEGIN_MANIP drag_axis sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot
-	ACTION axis_knob  28.00 31.50 0.01 sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot
+BEGIN_MANIP drag_axis sim/cockpit2/gauges/actuators/barometer_setting_in_hg_stby
+	ACTION axis_knob  28.00 31.50 0.01 sim/cockpit2/gauges/actuators/barometer_setting_in_hg_stby
 	DEG_PER_ACTION 1
 END_MANIP
 

@@ -19336,11 +19336,11 @@ ATTR_manip_none
 	ANIM_begin
 	ANIM_trans	-0.08446	-0.20092	-1.96327996	-0.08446	-0.20092	-1.96327996
 	ANIM_rotate	1	0	0	111.00025922	111.00025922
-	ANIM_rotate_begin	1	0	0	thranda/cockpit/ManualOverride
+	ANIM_rotate_begin	1	0	0	sim/cockpit2/controls/thrust_vector_ratio
 	ANIM_rotate_key	0	0
 	ANIM_rotate_key	1	-24.00005531
 	ANIM_rotate_end
-		ATTR_manip_drag_axis	hand	0	0	-0.1	0	1	thranda/cockpit/ManualOverride	
+		ATTR_manip_drag_axis	hand	0	0	-0.1	0	1	sim/cockpit2/controls/thrust_vector_ratio
 		ATTR_manip_wheel	0.1
 		TRIS	14586 60
 	ANIM_end
@@ -19849,11 +19849,11 @@ TRIS	2256 108
 ANIM_end
 ANIM_begin
 ANIM_trans	-0.08446	-0.20092	-1.96327996	-0.08446	-0.20092	-1.96327996
-ANIM_rotate_begin	1	0	0	thranda/cockpit/ManualOverride
+ANIM_rotate_begin	1	0	0	sim/cockpit2/controls/thrust_vector_ratio
 ANIM_rotate_key	0	0
 ANIM_rotate_key	1	-24.00005531
 ANIM_rotate_end
-ATTR_manip_drag_rotate	hand	-0.08445835	-0.2009187	-1.9632808	-1	0	0	0	24.00005189	0	0	1	0	0	thranda/cockpit/ManualOverride		
+ATTR_manip_drag_rotate	hand	-0.08445835	-0.2009187	-1.9632808	-1	0	0	0	24.00005189	0	0	1	0	0	sim/cockpit2/controls/thrust_vector_ratio
 TRIS	2148 108
 ANIM_end
 ANIM_begin
@@ -20065,7 +20065,7 @@ TRIS	29652 6
 ATTR_manip_drag_axis	rotate_medium	-0.2	0.1	0	28	31.5	sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot	
 ATTR_manip_wheel	0.01
 TRIS	6354 372
-ATTR_manip_drag_axis	rotate_medium	-0.2	0.1	0	28	31.5	sim/cockpit2/gauges/actuators/barometer_setting_in_hg_copilot	
+ATTR_manip_drag_axis	rotate_medium	-0.2	0.1	0	28	31.5	sim/cockpit2/gauges/actuators/barometer_setting_in_hg_stby
 ATTR_manip_wheel	0.01
 TRIS	11562 372
 ATTR_manip_push	down	0	0.5	thranda/BT[470]	
@@ -20312,7 +20312,7 @@ TRIS	4068 36
 ATTR_manip_toggle	button	1	0	thranda/ice/WindshieldIceL	
 ATTR_manip_wheel	1
 TRIS	4032 36
-ATTR_manip_toggle	button	1	0	sim/cockpit2/ice/anti_ice_engine_air[0]	
+ATTR_manip_toggle	button	1	0	simcoders/rep/inertial_separator_0/active
 ATTR_manip_wheel	1
 TRIS	3996 36
 ATTR_manip_toggle	button	1	0	thranda/ice/Probes	
@@ -20402,7 +20402,7 @@ TRIS	7098 372
 ATTR_manip_drag_axis	hand	0	0	0.1	0	1	sim/cockpit2/controls/parking_brake_ratio	
 ATTR_manip_wheel	0.05
 TRIS	6726 372
-ATTR_manip_drag_axis	rotate_small	-2	-2	0	-720	720	sim/cockpit/radios/nav2_obs_degm	
+ATTR_manip_drag_axis	rotate_small	-2	-2	0	-720	720	sim/cockpit2/radios/actuators/nav_obs_deg_mag_pilot[2]
 ATTR_manip_wheel	-1
 TRIS	5982 372
 ATTR_manip_drag_axis	rotate_small	0	0.07	0	-1	1	sim/cockpit2/gauges/actuators/artificial_horizon_adjust_deg_pilot	
